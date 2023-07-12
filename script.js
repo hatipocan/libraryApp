@@ -19,6 +19,8 @@ const author = document.getElementById('book-author');
 const pages = document.getElementById('total-pages');
 const readStatusRead = document.getElementById('read-status-read');
 
+
+// popup form variables and appearance 
 const popUpFrom = document.querySelector('.form-popup')
 const bookAddButton = document.querySelector("#book-add-btn");
 const container = document.querySelector('.container')
@@ -27,6 +29,11 @@ bookAddButton.addEventListener('click', () => {
     popUpFrom.style.display = "block"
     container.blur() 
 });
+
+const closeBtn = document.querySelector('.close-btn');
+closeBtn.addEventListener('click', () => {
+    popUpFrom.style.display = "none"
+})
 
 
 // a function that adds the user input to the Book constructor
