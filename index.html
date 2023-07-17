@@ -11,7 +11,7 @@
 <body>
     <main class="container">
 
-        <article>i am a book
+        <article class="book-card">i am a book
             <br>
             <br>
 
@@ -31,17 +31,14 @@
                 <label for="book-author">Author</label>
                 <input type="text" id="book-author">
 
-                <label for="pages" id="total-pages">Pages</label>
-                <input type="number">
+                <label for="total-pages">Pages</label>
+                <input type="number" id="total-pages">
 
-            
-                <input type="checkbox" id="read-status-read" name="Read">
-                <label for="read-status-read">Read</label>
-
+                <h3>Have you read the book?</h3>
                 
-                <input type="checkbox" id="read-status-notread" name="Not Read">
-                <label for="read-status-notread">Not Read</label>
-
+                    <label><input type="radio"  name="read-status" value="read">Read</label>
+                    <label><input type="radio"  name="read-status" value="not read" checked>Not Read</label>
+                
             </form>
 
             <div class="add-button-container">

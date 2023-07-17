@@ -14,16 +14,28 @@ function Book(title, author, pages, read) {
 
 // form elements turned into variables
 
-const title = document.getElementById('book-title');
-const author = document.getElementById('book-author');
-const pages = document.getElementById('total-pages');
-const readStatusRead = document.getElementById('read-status-read');
+    const enteredTitle = document.getElementById('book-title');
+    const enteredAuthor = document.getElementById('book-author');
+    const enteredPages = document.querySelector('#total-pages');
+    let readStatus = '';
+   
+
+// reset function for form imputs
+
+function reset() {
+    enteredTitle.value = ''
+    enteredAuthor.value = ''
+    enteredPages.value = ''
+
+}
+    
 
 
 // popup form variables and appearance 
 const popUpFrom = document.querySelector('.form-popup')
 const bookAddButton = document.querySelector("#book-add-btn");
 const container = document.querySelector('.container')
+const bookCard = document.querySelector('.book-card');
 
 bookAddButton.addEventListener('click', () => {
     popUpFrom.style.display = "block"
@@ -33,12 +45,30 @@ bookAddButton.addEventListener('click', () => {
 const closeBtn = document.querySelector('.close-btn');
 closeBtn.addEventListener('click', () => {
     popUpFrom.style.display = "none"
-})
+});
+
+
+const addButton = document.querySelector('.add-button');
+addButton.addEventListener('click', () => {
+
+    readStatus = document.querySelector("input[name='read-status']:checked").value;
+
+    
+    let book = new Book (enteredTitle.value,  enteredAuthor.value,  enteredPages.value , readStatus); 
+
+    myLibrary.push(book);
+
+    reset();
+
+    popUpFrom.style.display = 'none'
+
+});
 
 
 // a function that adds the user input to the Book constructor
 
 function addBookToLibrary (){
+    
 
 }
 
