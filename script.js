@@ -27,7 +27,7 @@ const container = document.querySelector('.container')
 
 bookAddButton.addEventListener('click', () => {
     popUpFrom.style.display = "block"
-    container.blur() 
+    
 });
 
 const closeBtn = document.querySelector('.close-btn');
