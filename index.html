@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +12,20 @@
 <body>
     <main class="container">
 
-        <article class="book-card">i am a book
-            <br>
-            <br>
+        <article class="book-card">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Pages</th>
+                        <th>Read Status</th>
+                        <th>Remove</th>
+                    </tr>
+                </thead>
+                    <tbody id="tableData"></tbody>
+            </table>
+         
 
             <button id="book-add-btn">Add New Book</button>
         </article>
@@ -36,8 +48,8 @@
 
                 <h3>Have you read the book?</h3>
                 
-                    <label><input type="radio"  name="read-status" value="read">Read</label>
-                    <label><input type="radio"  name="read-status" value="not read" checked>Not Read</label>
+                    <label><input type="radio"  name="read-status" value="read" checked>Read</label>
+                    <label><input type="radio"  name="read-status" value="not read">Not Read</label>
                 
             </form>
 

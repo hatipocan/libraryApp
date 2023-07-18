@@ -28,6 +28,44 @@ function reset() {
     enteredPages.value = ''
 
 }
+
+
+
+// function that loops through the myLibrary array and adds the object to the book-card article as a table
+
+let tableData = document.getElementById('tableData');
+
+function deleteRowFunction(o) {
+    
+    let p=o.parentNode.parentNode;
+        p.parentNode.removeChild(p);
+
+    
+   }
+
+
+function myLibraryToTable () {
+    let k = '<tbody>'
+    
+        for(i = 0;i < myLibrary.length; i++){
+            k+= `<tr class="table-row">`;
+            k+= '<td>' + myLibrary[i].title + '</td>';
+            k+= '<td>' + myLibrary[i].author + '</td>';
+            k+= '<td>' + myLibrary[i].pages + '</td>';
+            k+= '<td>' + myLibrary[i].read + '</td>';
+            k+= '<td>' + `<input type="button" value="Delete Row" class="index-${i}" onclick="deleteRowFunction(this)">  ` + '</td>';
+            k+= '</tr>';
+        
+           
+            
+        }
+        k+='</tbody>';
+        tableData.innerHTML = k;
+    
+    };
+    
+
+
     
 
 
@@ -58,6 +96,9 @@ addButton.addEventListener('click', () => {
 
     myLibrary.push(book);
 
+    myLibraryToTable();
+
+
     reset();
 
     popUpFrom.style.display = 'none'
@@ -65,15 +106,6 @@ addButton.addEventListener('click', () => {
 });
 
 
-// a function that adds the user input to the Book constructor
 
-function addBookToLibrary (){
-    
-
-}
-
-// a function that loops through the myLibrary array and displays each book on the page.
-
-// const bookOne = new Book('Kafka on the Shore', 'Haruki Murakami', 465, 'read');
 
 

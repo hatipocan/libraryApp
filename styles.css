@@ -7,41 +7,43 @@
     
   }
   
-  .form-container {
-    display: block;
-    padding: 2em;
-    
-  }
+.form-container {
+  display: block;
+  padding: 2em;
+  
+}
 
-  #book-add-btn {
-    
-    width: 10em;
-    height: 3em;
+#book-add-btn {
+  
+  width: 10em;
+  height: 3em;
 
-  }
+}
 
-  .add-button-container {
-    display: flex;
-    justify-content: flex-end;
+.add-button-container {
+  display: flex;
+  justify-content: flex-end;
 
-  }
-  .add-button {
-    width: 5em;
-    height: 3em;
-  }
+}
+.add-button {
+  width: 5em;
+  height: 3em;
+}
 
-  .btn-container {
-    display: grid;
-    justify-items: end;
-    
-  }
+.btn-container {
+  display: grid;
+  justify-items: end;
+  
+}
 
-  .close-btn {
-    display: grid;
-    width: 1em;
-    height: 2em;
-    align-content: center;
-    justify-content: center;
+.close-btn {
+  display: grid;
+  width: 1em;
+  height: 2em;
+  align-content: center;
+  justify-content: center;
 
-  }
+}
+
+
 
