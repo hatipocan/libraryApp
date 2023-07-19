@@ -12,6 +12,12 @@ function Book(title, author, pages, read) {
     }
 };
 
+// Book.prototype.changeReadStatus = () => {
+//     if (this.read == 'read') {this.read = 'not read'}
+//     else if (this.read == 'not read') { this.read = 'read'}
+
+// }
+
 // form elements turned into variables
 
     const enteredTitle = document.getElementById('book-title');
@@ -35,13 +41,20 @@ function reset() {
 
 let tableData = document.getElementById('tableData');
 
-function deleteRowFunction(o) {
+function deleteRowFunction(o, index) {
     
     let p=o.parentNode.parentNode;
         p.parentNode.removeChild(p);
 
+    myLibrary.splice(index, 1);
+
     
    }
+
+function changeReadStatus () {
+    if (myLibrary[i].read == 'read') { return 'not read'}
+    else if (myLibrary[i].read == 'not read') { return  'read'}
+}
 
 
 function myLibraryToTable () {
@@ -52,8 +65,8 @@ function myLibraryToTable () {
             k+= '<td>' + myLibrary[i].title + '</td>';
             k+= '<td>' + myLibrary[i].author + '</td>';
             k+= '<td>' + myLibrary[i].pages + '</td>';
-            k+= '<td>' + myLibrary[i].read + '</td>';
-            k+= '<td>' + `<input type="button" value="Delete Row" class="index-${i}" onclick="deleteRowFunction(this)">  ` + '</td>';
+            k+= '<td>' + `<select name="readStatus"><option value="read1">${myLibrary[i].read}</option><option value="read2">${changeReadStatus()}</option></select>` + '</td>';
+            k+= '<td>' + `<input type="button" value="Delete Row" class="index-${i}" onclick="deleteRowFunction(this, ${i})">  ` + '</td>';
             k+= '</tr>';
         
            

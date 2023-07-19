@@ -4,15 +4,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book App</title>
+    <title>Library App</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <main class="container">
+    <h1>A Basic Library App</h1>
 
-        <article class="book-card">
+        <!-- <article class="book-card"> -->
             <table>
                 <thead>
                     <tr>
@@ -28,7 +29,7 @@
          
 
             <button id="book-add-btn">Add New Book</button>
-        </article>
+        <!-- </article> -->
 
         <fieldset class="form-popup">
             <div class="btn-container">
@@ -38,13 +39,13 @@
             <form class="form-container" action="" method="">
 
                 <label for="book-title">Book Title</label>
-                <input type="text" id="book-title">
+                <input type="text" id="book-title" required>
 
                 <label for="book-author">Author</label>
-                <input type="text" id="book-author">
+                <input type="text" id="book-author" required>
 
                 <label for="total-pages">Pages</label>
-                <input type="number" id="total-pages">
+                <input type="number" id="total-pages" required>
 
                 <h3>Have you read the book?</h3>
                 

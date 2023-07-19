@@ -1,1 +1,1 @@
-a book app which adds books to an object consturctor and displays the list on the page. 
+a basic library app which adds books to an object consturctor and displays the list on the page. Change the read status dynamicly and remove a row if required
