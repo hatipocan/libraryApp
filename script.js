@@ -2,13 +2,15 @@
 let myLibrary = [];
 
 // a constructor object which constructs Book objects
-function Book(title, author, pages, read) {
-    this.title = title
-    this.author = author
-    this.pages = pages
-    this.read = read
-    this.info = function() {
-        return (`${title} by ${author}, ${pages} pages, ${read}`)
+class Book {
+    constructor(title, author, pages, read) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.read = read;
+        this.info = function () {
+            return (`${title} by ${author}, ${pages} pages, ${read}`);
+        };
     }
 };
 
@@ -26,7 +28,7 @@ function Book(title, author, pages, read) {
     let readStatus = '';
    
 
-// reset function for form imputs
+// reset function for form inputs
 
 function reset() {
     enteredTitle.value = ''
@@ -78,8 +80,6 @@ function myLibraryToTable () {
     };
     
 
-
-    
 
 
 // popup form variables and appearance 
