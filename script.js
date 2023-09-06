@@ -1,7 +1,7 @@
 // an array that stores all the book objects comming from the Book constructor
 let myLibrary = [];
 
-// a constructor object which constructs Book objects
+// a constructor object which constructs Book objects - changed to a class for the final draft
 class Book {
     constructor(title, author, pages, read) {
         this.title = title;
